@@ -1,0 +1,67 @@
+/* globalStyles */
+@import url(./reset.css);
+@import url(./albums.css);
+@import url(./genres.css);
+@import url(./header.css);
+@import url(./index.css);
+@import url(./price-range.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+:root {
+    --color-brand-1: #6F00FF;
+    --color-brand-2: #8629FF;
+    --color-gray-1: #15171A;
+    --color-gray-2: #212529;
+    --color-gray-3: #2B2F33;
+    --color-gray-4: #CED4DA;
+    --color-gray-5: #DEE2E6;
+    --color-gray-6: #F1F3F5;
+    --color-gray-7: #F8F9FA;
+    --color-gray-8: #FDFEFF;
+
+    --font-size-title-1: 40px;
+    --font-weight-title-1: 600;
+    --font-size-title-2: 24px;
+    --font-weight-title-2: 600;
+    --font-size-title-3: 22px;
+    --font-weight-title-3: 600px;
+    --font-size-button: 16px;
+    --font-weight-button: 500;
+    --font-size-text-1: 16px;
+    --font-weight-text-1: 400;
+    --font-size-text-2: 19.2px;
+    --font-weight-text-2: 600;
+
+    --header-padding: 48px 0px;
+
+    --border-radius: 5px
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-gray-8);
+    margin: 0 auto;
+    width: 1024px;
+    padding: 0rem 2rem;
+}
+
+h1 {
+    font-size: var(--font-size-title-1);
+    font-weight: var(--font-weight-title-1);
+    color: var(--color-gray-2);
+}
+
+h2 {
+    font-size: var(--font-size-title-2);
+    font-weight: var(--font-weight-title-2);
+    color: var(--color-gray-2);
+}
+
+h3 {
+    font-size: var(--font-size-title-3);
+    font-weight: var(--font-weight-title-3);
+    color: var(--color-gray-2);
+}
+

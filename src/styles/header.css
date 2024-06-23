@@ -1,0 +1,23 @@
+.header__title-1--highlight {
+    color: var(--color-brand-2)
+}
+
+.header {
+    padding: var(--header-padding);
+    border-bottom: 3px solid var(--color-brand-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__button {
+    width: 44px;
+    height: 36px;
+    background-color: var(--color-gray-6);
+    border: none;
+    border-radius: var(--border-radius);
+    
+    background-image: url(../assets/icons/moon-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
