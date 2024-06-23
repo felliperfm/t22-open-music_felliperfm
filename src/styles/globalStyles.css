@@ -43,7 +43,7 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--color-gray-8);
     margin: 0 auto;
-    width: 1024px;
+    max-width: 1024px;
     padding: 0rem 2rem;
 }
 

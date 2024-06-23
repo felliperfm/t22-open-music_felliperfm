@@ -22,108 +22,118 @@
   <!-- CONTEÚDO PRINCIPAL -->
   <main>
     <!-- SEÇÃO DE FILTRO POR GENERO -->
-    <section>
+    <section class="genre">
       <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-      <nav>
-        <h2 class="title-2">Gênero Musical</h2>
-        <ul>
-          <li>Todos</li>
-          <li>Pop</li>
-          <li>MPB</li>
-          <li>Forró</li>
-          <li>Samba</li>
-          <li>Baião</li>
-          <li>Rap</li>
-          <li>Hip-Hop</li>
-        </ul>
-      </nav>
+      <h2 class="genre__title title-2">Gênero Musical</h2>
+      <div class="genre__options">
+        <button type="button" class="genre__button genreButton selected" data-genre="all">Todos</button>
+        <button type="button" class="genre__button genreButton" data-genre="pop">Pop</button>
+        <button type="button" class="genre__button genreButton" data-genre="mpb">MPB</button>
+        <button type="button" class="genre__button genreButton" data-genre="forro">Forró</button>
+        <button type="button" class="genre__button genreButton" data-genre="samba">Samba</button>
+        <button type="button" class="genre__button genreButton" data-genre="baiao">Baião</button>
+        <button type="button" class="genre__button genreButton" data-genre="rap">Rap</button>
+        <button type="button" class="genre__button genreButton" data-genre="hip-hop">Hip-Hop</button>
+      </div>
     </section>
 
     <!-- SEÇÃO DE FILTRO POR PREÇO -->
-    <section>
+    <section class="price-range">
       <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-      <div>
+      <div class="price-range__title">
         <h2 class="title-2">Definir Preço</h2>
-        <h3 class="title-3">Até <span>R$ 100</span></h3>
+        <h3 class="title-3">Até <span class="price-range__title3--highlight">R$ 100</span></h3>
       </div>
-      <input type="range">
+      <input id="range" type="range">
     </section>
 
     <!-- SEÇÃO DE ALBUNS -->
-    <section>
+    <section class="albums">
       <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-      <h2 class="title-2">Álbuns Encontrados</h2>
-      <ul>
-        <li>
-          <img src="./src/assets/imgs/Acabou o Chorare.png">
-          <h3 class="title-3">Acabou o Chorare</h3>
-          <div>
-            <p>Novos Baianos</p>
-            <p>MPB</p>
-          </div>
-          <div>
-            <p>R$ 137.91</p>
-            <button>Comprar</button>
+      <h2 class="title-2 albums__title">Álbuns Encontrados</h2>
+      <ul class="albums__list">
+        <li class="album">
+          <img src="./src/assets/imgs/Acabou o Chorare.png" class="album__image">
+          <div class="album-detail">
+            <h3 class="title-3 album-detail__title">Acabou o Chorare</h3>
+            <div class="album-subtitle">
+              <p>Novos Baianos</p>
+              <p>MPB</p>
+            </div>
+            <div class="album-price">
+              <p>R$ 137.91</p>
+              <button>Comprar</button>
+            </div>
           </div>
         </li>
-        <li>
-          <img src="./src/assets/imgs/The Wall.png">
-          <h3 class="title-3">The Wall</h3>
-          <div>
+        <li class="album">
+          <img src="./src/assets/imgs/The Wall.png" class="album__image">
+          <div class="album-detail">
+            <h3 class="title-3 album-detail__title">The Wall</h3>
+          <div class="album-subtitle">
             <p>Pink Floyd</p>
             <p>Rock</p>
           </div>
-          <div>
+          <div class="album-price">
             <p>R$ 123.56</p>
             <button>Comprar</button>
           </div>
+          </div>
         </li>
-        <li>
-          <img src="./src/assets/imgs/To Pimp a Butterfly.png">
-          <h3 class="title-3">To Pimp a Butterfly</h3>
-          <div>
+        <li class="album">
+          <img src="./src/assets/imgs/To Pimp a Butterfly.png" class="album__image">
+          <div class="album-detail">
+            <h3 class="title-3 album-detail__title">To Pimp a Butterfly</h3>
+          <div class="album-subtitle">
             <p>Kendrick Lamar</p>
             <p>Rap</p>
           </div>
-          <div>
+          <div class="album-price">
             <p>R$ 102.66</p>
             <button>Comprar</button>
           </div>
+          </div>
         </li>
-        <li>
-          <img src="./src/assets/imgs/The Wall.png">
-          <h3 class="title-3">The Wall</h3>
-          <div>
+        <li class="album">
+          <img src="./src/assets/imgs/The Wall.png" class="album__image">
+          <div class="album-detail">
+            <h3 class="title-3 album-detail__title">The Wall</h3>
+          <div class="album-subtitle">
             <p>Pink Floyd</p>
             <p>Rock</p>
           </div>
-          <div>
+          <div class="album-price">
             <p>R$ 123.56</p>
             <button>Comprar</button>
           </div>
+          </div>
         </li>
-        <li>
-          <img src="./src/assets/imgs/Acabou o Chorare.png">
-          <h3 class="title-3">Acabou o Chorare</h3>
-          <div>
+        <li class="album">
+          <img src="./src/assets/imgs/Acabou o Chorare.png" class="album__image">
+          <div class="album-detail">
+            <h3 class="title-3 album-detail__title">Acabou o Chorare</h3>
+          <div class="album-subtitle">
             <p>Novos Baianos</p>
             <p>MPB</p>
           </div>
-          <div>
+          <div class="album-price">
             <p>R$ 137.91</p>
             <button>Comprar</button>
           </div>
+          </div>
         </li>
-        <li>
-          <img src="./src/assets/imgs/To Pimp a Butterfly.png">
-          <h3 class="title-3">To Pimp a Butterfly</h3>
-          <div>
+        <li class="album">
+          <img src="./src/assets/imgs/To Pimp a Butterfly.png" class="album__image">
+          <div class="album-detail">
+            <h3 class="title-3 album-detail__title">To Pimp a Butterfly</h3>
+          <div class="album-subtitle">
             <p>Kendrick Lamar</p>
             <p>Rap</p>
           </div>
-          <div>
+          <div class="album-price">
             <p>R$ 102.66</p>
             <button>Comprar</button>
+          </div>
           </div>
         </li>
       </ul>
