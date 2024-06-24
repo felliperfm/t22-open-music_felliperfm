@@ -22,8 +22,18 @@
     font-weight: var(--font-weight-button);
 }
 
+.genre__button--dark-mode {
+    border: 1px solid var(--color-gray-2);
+    background-color: var(--color-gray-2);
+    color: var(--color-gray-6);
+}
+
 .genre__button:hover {
     border: 1px solid var(--color-gray-2);
+}
+
+.genre__button--dark-mode:hover {
+    border: 1px solid var(--color-gray-6);
 }
 
 .genre__button.selected {
@@ -32,3 +42,8 @@
     color: var(--color-gray-7);
 }
 
+.genre__button--dark-mode.selected {
+    background-color: var(--color-gray-7);
+    border: 1px solid var(--color-gray-7);
+    color: var(--color-gray-2);
+}

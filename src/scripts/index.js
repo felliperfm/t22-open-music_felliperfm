@@ -1,20 +1,13 @@
 import { applyInputRangeStyle } from "./inputRange.js"
 import { albumList } from "./albumsDatabase.js";
+import { toggleDarkMode, loadThemePreference } from "./theme.js";
 
 document.querySelectorAll('.genreButton').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('.genreButton').forEach(btn => btn.classList.remove('selected'));
-
         button.classList.add('selected');
-
     });
 });
-
-function routine() {
-    applyInputRangeStyle()
-}
-
-routine()
 
 function renderAlbums(albums) {
     const albumsList = document.querySelector('.albums__list');
@@ -67,3 +60,28 @@ function renderAlbums(albums) {
 }
 
 renderAlbums(albumList);
+
+document.querySelector('.header__button').addEventListener('click', toggleDarkMode);
+
+function updatePriceRange() {
+    const rangeInput = document.getElementById('range');
+    const priceSpan = document.querySelector('.price-range__title3--highlight');
+    priceSpan.textContent = `R$ ${rangeInput.value}`;
+    filterAlbumsByPrice();
+}
+
+function filterAlbumsByPrice() {
+    const rangeInput = document.getElementById('range').value;
+    const filteredAlbums = albumList.filter(album => parseFloat(album.price) <= parseFloat(rangeInput));
+    renderAlbums(filteredAlbums);
+}
+
+document.getElementById('range').addEventListener('input', updatePriceRange);
+
+function routine() {
+    applyInputRangeStyle();
+    updatePriceRange();
+    loadThemePreference();
+}
+
+routine()

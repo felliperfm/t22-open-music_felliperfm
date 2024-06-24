@@ -9,6 +9,10 @@ header {
     background-color: var(--color-gray-8);
 }
 
+.header--dark-mode {
+    background-color: var(--color-gray-1);
+}
+
 .header {
     padding: var(--header-padding);
     border-bottom: 3px solid var(--color-brand-2);
@@ -27,4 +31,13 @@ header {
     background-image: url(../assets/icons/moon-icon.svg);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.header__button--dark-mode {
+    background-color: var(--color-gray-3);
+    background-image: url(../assets/icons/sun-icon.svg);
+}
+
+.header__button:hover {
+    cursor: pointer;
 }

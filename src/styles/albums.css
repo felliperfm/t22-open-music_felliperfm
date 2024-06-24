@@ -17,8 +17,16 @@
     min-width: 308px;
 }
 
+.album--dark-mode {
+    background-color: var(--color-gray-2);
+}
+
 .album:hover {
     background-color: var(--color-gray-5);
+}
+
+.album--dark-mode:hover {
+    background-color: var(--color-gray-4);
 }
 
 .album__image {
@@ -47,6 +55,14 @@
     font-size: var(--font-size-text-1);
     font-weight: var(--font-weight-text-1);
     color: var(--color-gray-3);
+}
+
+.album-subtitle .p--dark-mode {
+    color: var(--color-gray-6)
+}
+
+.p--dark-mode {
+    color: var(--color-gray-7);
 }
 
 .album-price {

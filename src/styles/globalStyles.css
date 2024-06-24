@@ -47,6 +47,10 @@ body {
     padding: 0rem 2rem;
 }
 
+.body--dark-mode{
+    background-color: var(--color-gray-1);
+}
+
 h1 {
     font-size: var(--font-size-title-1);
     font-weight: var(--font-weight-title-1);
@@ -65,3 +69,8 @@ h3 {
     color: var(--color-gray-2);
 }
 
+.h1--dark-mode,
+.h2--dark-mode,
+.h3--dark-mode {
+    color: var(--color-gray-7);
+}
