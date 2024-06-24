@@ -1,13 +1,17 @@
 import { applyInputRangeStyle } from "./inputRange.js"
-import { albumList } from "./albumsDatabase.js";
+// import { albumList } from "./albumsDatabase.js";
 import { toggleDarkMode, loadThemePreference } from "./theme.js";
+import { fetchMusicData } from "./api.js";
 
 document.querySelectorAll('.genreButton').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('.genreButton').forEach(btn => btn.classList.remove('selected'));
         button.classList.add('selected');
+        filterAlbums();
     });
 });
+
+let albumList = []
 
 function renderAlbums(albums) {
     const albumsList = document.querySelector('.albums__list');
@@ -59,26 +63,33 @@ function renderAlbums(albums) {
     });
 }
 
-renderAlbums(albumList);
-
 document.querySelector('.header__button').addEventListener('click', toggleDarkMode);
 
 function updatePriceRange() {
     const rangeInput = document.getElementById('range');
     const priceSpan = document.querySelector('.price-range__title3--highlight');
     priceSpan.textContent = `R$ ${rangeInput.value}`;
-    filterAlbumsByPrice();
+    filterAlbums();
 }
 
-function filterAlbumsByPrice() {
-    const rangeInput = document.getElementById('range').value;
-    const filteredAlbums = albumList.filter(album => parseFloat(album.price) <= parseFloat(rangeInput));
+function filterAlbums() {
+    const selectedGenre = document.querySelector('.genreButton.selected').getAttribute('data-genre');
+    const maxPrice = parseFloat(document.getElementById('range').value);
+
+    const filteredAlbums = albumList.filter(album => {
+        const matchesGenre = selectedGenre === 'all' || album.genre.toLowerCase() === selectedGenre.toLowerCase();
+        const matchesPrice = parseFloat(album.price) <= maxPrice;
+        return matchesGenre && matchesPrice;
+    });
+
     renderAlbums(filteredAlbums);
 }
 
 document.getElementById('range').addEventListener('input', updatePriceRange);
 
-function routine() {
+async function routine() {
+    albumList = await fetchMusicData();
+    renderAlbums(albumList);
     applyInputRangeStyle();
     updatePriceRange();
     loadThemePreference();
